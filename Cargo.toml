@@ -6,3 +6,19 @@ edition = "2021"
 # See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
 
 [dependencies]
+axum = "0.6.10"
+tokio = { version = "1.27.0", features = ["full"] }
+
+async-graphql = "5.0.7"
+async-graphql-axum = "5.0.7"
+
+diesel = { version = "2.0.3", features=["uuid", "chrono"] }
+uuid7 = "0.6.2"
+uuid = { version = "1", features = ["serde", "v7"] }
+diesel-async = { version = "0.2.1", features = ["postgres",  "deadpool"] }
+
+config = "0.13.1"
+serde_derive = "1.0.160"
+serde = "1.0.160"
+chrono = "0.4.24"
+thiserror = "1.0"
