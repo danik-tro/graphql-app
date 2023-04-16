@@ -1,4 +1,6 @@
 pub mod errors;
+mod mappings;
+pub mod models;
 pub mod repository;
 pub mod schema;
 
@@ -33,5 +35,6 @@ pub async fn build_connection_pool(
     let pool = Pool::builder(config)
         .build()
         .map_err(|err| DataAccessError::ConnectionError(err.to_string()))?;
+
     Ok(PgConnectionPool::new(pool))
 }
